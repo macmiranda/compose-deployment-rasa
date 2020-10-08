@@ -12,7 +12,7 @@ To build and run the containers, do:
     
 The user running the command above needs write access to `/var/run/docker.sock`. That can be easily done by adding the user to the `docker` group or by running the command with `sudo`
 
-That's it. Now you can be greeted by creating a POST request to the service on port 9090 and passing your name in the body of the request as JSON,like so:
+That's it. Now you can be greeted by creating a POST request to the service on port 9090 and passing your name in the body of the request in JSON format, like so:
 
     S curl -X POST -H "Content-Type: application/json" -d "{\"name\": \"Marco\"}" http://<your_server_ip>:9090
 
