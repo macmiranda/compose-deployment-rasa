@@ -12,8 +12,10 @@ ADD *.py /app
 ADD *.txt /app
 
 # install dependencies
-RUN apk add --no-cache build-base linux-headers python3-dev
-RUN pip install -r requirements.txt
+RUN apk add --no-cache --virtual .build-deps build-base linux-headers python3-dev \
+    && pip install -r requirements.txt \
+    && apk del .build-deps \
+    && rm -rf `pip cache dir`
 
 # run the comman
 CMD ["uwsgi", "--http", ":9090", "--manage-script-name", "--mount", "/=user_greeting_service:app"]
