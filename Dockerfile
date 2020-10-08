@@ -10,6 +10,7 @@ WORKDIR /app
 # add contents to /app 
 ADD *.py /app
 ADD *.txt /app
+ADD *.ini /app
 
 # install dependencies
 RUN apk add --no-cache --virtual .build-deps build-base linux-headers python3-dev \
@@ -18,4 +19,4 @@ RUN apk add --no-cache --virtual .build-deps build-base linux-headers python3-de
     && rm -rf `pip cache dir`
 
 # run the comman
-CMD ["uwsgi", "--http", ":9090", "--manage-script-name", "--mount", "/=user_greeting_service:app"]
+CMD ["uwsgi", "--ini", "user_greeting_service.ini"]
