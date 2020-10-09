@@ -1,5 +1,7 @@
 # Simple Flask app that greets you
 
+## Getting started
+
 In order to run this app in production you need to have `docker` and `docker-compose` installed. You also need `git` if you want to clone the repository directly onto your server.
 
 To clone the repository, do:
@@ -17,3 +19,9 @@ That's it. Now you can be greeted by creating a POST request to the service on p
     S curl -X POST -H "Content-Type: application/json" -d "{\"name\": \"Marco\"}" http://<your_server_ip>:9090
 
 Make sure you replace `<your_server_ip>` with the appropriate IP address and that the port 9090 is open on your local firewall.
+
+## Making changes to the code
+
+If you change the code after the containers are running, you'll need to destroy them and rebuid, recreate them with the command:
+
+    $ docker-compose down && docker-compose up -d --build
