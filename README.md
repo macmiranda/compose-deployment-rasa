@@ -1,10 +1,10 @@
 # Simple Flask app that greets you
 
-In order to run this app in production you need to have `docker` and `docker-compose` installed. You also need `git` if you want to clone the repository directly on the server. Optionally, you can download the zip package from GitHub.
+In order to run this app in production you need to have `docker` and `docker-compose` installed. You also need `git` if you want to clone the repository directly onto your server.
 
-To check out the repository, do:
+To clone the repository, do:
 
-    $ git clone https://github.com/macmiranda/compose-deployment-rasa.git
+    $ git clone https://github.com/macmiranda/flask-simple-service.git
 
 To build and run the containers, do:
 
