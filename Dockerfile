@@ -5,6 +5,7 @@ LABEL description="Simple flask app that greets you"
 LABEL maintainer="github.com/macmiranda"
 
 # Set the working directory to /app
+RUN mkdir /app
 WORKDIR /app
 
 # add contents to /app 
