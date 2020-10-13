@@ -1,6 +1,6 @@
 FROM python:3.6-alpine
 
-LABEL version="0.2"
+LABEL version="0.4"
 LABEL description="Simple flask app that greets you"
 LABEL maintainer="github.com/macmiranda"
 
