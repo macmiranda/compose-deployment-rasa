@@ -11,7 +11,16 @@ To clone the repository, do:
 To build and run the containers, do:
 
     $ docker-compose up -d
-    
+
+Optionally, you can spin up the same stack with Docker Swarm:
+
+    $ docker stack deploy -c docker-compose.yml <your_stack_name>
+
+Just replace `<your_stack_name>` with the actual name you want to use for this deployment. If you're running this in production with multiple nodes, uncomment the lines:
+
+    #        placement:
+    #        max_replicas_per_node: 1
+
 The user running the command above needs write access to `/var/run/docker.sock`. That can be easily done by adding the user to the `docker` group or by running the command with `sudo`
 
 That's it. Now you can tell the app to remember your name by creating a POST request to the service on port 9090 and passing it in the body of the request in JSON format, like so:
