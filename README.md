@@ -12,7 +12,7 @@ To build and run the containers, do:
 
     $ docker-compose up -d
 
-Optionally, you can spin up the same stack with Docker Swarm:
+Optionally, you can spin up the same stack with Docker Swarm (you need to have it configured before):
 
     $ docker stack deploy -c docker-compose.yml <your_stack_name>
 
