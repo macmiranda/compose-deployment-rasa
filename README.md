@@ -35,6 +35,4 @@ Make sure you replace `<your_server_ip>` with the appropriate IP address and tha
 
 ## Making changes to the code
 
-If you change the code after the containers are running, you'll need to destroy them and rebuid, recreate them with the command:
-
-    $ docker-compose down && docker-compose up -d --build
+If you make any changes to the application code or to the `Dockerfile`, you'll need to rebuild the Docker image and publish it to a image registry. Make the approriate changes to the `docker-compose` file afterwards.
