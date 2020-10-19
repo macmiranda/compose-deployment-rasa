@@ -35,4 +35,4 @@ Make sure you replace `<your_server_ip>` with the appropriate IP address and tha
 
 ## Making changes to the code
 
-If you make any changes to the application code or to the `Dockerfile`, you'll need to rebuild the Docker image and publish it to a image registry. Make the approriate changes to the `docker-compose` file afterwards.
+If you make any changes to the application code or to the `Dockerfile`, you'll need to rebuild the Docker image and publish it to a image registry. Make the approriate changes to the `docker-compose.yml` file afterwards.
