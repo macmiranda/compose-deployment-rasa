@@ -1,4 +1,4 @@
-FROM python:3.6-alpine
+FROM python:3.9-alpine
 
 LABEL version="0.1"
 LABEL description="Simple flask app that greets you"
